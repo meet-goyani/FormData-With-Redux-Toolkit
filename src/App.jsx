@@ -30,7 +30,7 @@ function App() {
         <Container>
           <Box sx={{ display: "flex", justifyContent: "end" }}>
             <Button onClick={handelOpen} variant="contained">
-              ADD
+              ADD USER
             </Button>
           </Box>
           <Box>
@@ -42,6 +42,7 @@ function App() {
                     <TableCell align="center">Email</TableCell>
                     <TableCell align="center">Date</TableCell>
                     <TableCell align="center">Gender</TableCell>
+                    <TableCell align="center">Hobbies</TableCell>
                     <TableCell align="center">Action</TableCell>
                   </TableRow>
                 </TableHead>
@@ -63,6 +64,7 @@ function App() {
                           <TableCell align="center">{user.email}</TableCell>
                           <TableCell align="center">{user.date}</TableCell>
                           <TableCell align="center">{user.gender}</TableCell>
+                          <TableCell align="center">{user.hobbies}</TableCell>
                           <TableCell align="center">
                             <Box
                               sx={{ display: "flex", justifyContent: "center" }}

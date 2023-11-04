@@ -14,63 +14,10 @@ import {
   RadioGroup,
   TextField,
 } from "@mui/material";
-import { useDispatch } from "react-redux";
-import { addUser } from "../redux/userDataSlice";
+import useForm from "../hooks/useForm";
 
 function FormModal({ open, setOpen }) {
-  const dispatch = useDispatch();
-  const [error, setError] = useState("");
-  // const [checkItems, setCheckItems] = useState([]);
-
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    gender: "",
-    date: "",
-    hobbies: [],
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    if (name === "hobbies") {
-      const updatedHobbies = formData.hobbies.includes(value)
-        ? formData.hobbies.filter((item) => item !== value)
-        : [...formData.hobbies, value];
-      // console.log(updatedHobbies, "updatedHobbies");
-      setFormData((prevFormData) => ({
-        ...prevFormData,
-        hobbies: updatedHobbies,
-      }));
-    } else {
-      setFormData((prevFormData) => ({
-        ...prevFormData,
-        [name]: value,
-      }));
-    }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (
-      !formData.name &&
-      !formData.email &&
-      !formData.gender &&
-      !formData.date
-    ) {
-      setError("All filed are required!");
-    } else {
-      dispatch(addUser(formData));
-      setOpen(false);
-    }
-    setFormData({
-      name: "",
-      email: "",
-      gender: "",
-      date: "",
-      hobbies: [],
-    });
-  };
-
+  const { formData, handleChange, handleSubmit, error } = useForm();
   const handleClose = () => {
     setOpen(false);
   };
