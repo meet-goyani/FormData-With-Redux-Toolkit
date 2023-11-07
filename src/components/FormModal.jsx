@@ -34,7 +34,7 @@ function FormModal({ open, setOpen }) {
       <DialogContent>
         <form onSubmit={handleSubmit}>
           <Grid rowSpacing={3}>
-            <Grid sx={{ my: 2 }} md={12}>
+            <Grid item sx={{ my: 2 }} md={12}>
               <TextField
                 fullWidth
                 id="outlined-basic"
@@ -46,7 +46,7 @@ function FormModal({ open, setOpen }) {
                 onChange={handleChange}
               />
             </Grid>
-            <Grid sx={{ my: 2 }} md={12}>
+            <Grid item sx={{ my: 2 }} md={12}>
               <TextField
                 fullWidth
                 id="outlined-basic"
@@ -58,7 +58,7 @@ function FormModal({ open, setOpen }) {
                 onChange={handleChange}
               />
             </Grid>
-            <Grid sx={{ my: 2 }} md={12}>
+            <Grid item sx={{ my: 2 }} md={12}>
               <TextField
                 fullWidth
                 id="outlined-basic"
@@ -69,7 +69,7 @@ function FormModal({ open, setOpen }) {
                 onChange={handleChange}
               />
             </Grid>
-            <Grid md={12}>
+            <Grid item md={12}>
               <FormControl>
                 <FormLabel id="demo-controlled-radio-buttons-group">
                   Gender
@@ -94,9 +94,9 @@ function FormModal({ open, setOpen }) {
                 </RadioGroup>
               </FormControl>
             </Grid>
-            <Grid md={12}>
+            <Grid item md={12}>
               <FormGroup>
-                <Grid md={6}>
+                <Grid item md={6}>
                   <FormControlLabel
                     control={
                       <Checkbox
@@ -120,7 +120,7 @@ function FormModal({ open, setOpen }) {
                     label="Reading"
                   />
                 </Grid>
-                <Grid md={6}>
+                <Grid item md={6}>
                   <FormControlLabel
                     label="Writing"
                     control={

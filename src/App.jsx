@@ -15,6 +15,7 @@ import { useState } from "react";
 import FormModal from "./components/FormModal";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteUser } from "./redux/userDataSlice";
+import { FetchData } from "./components/FetchData";
 
 function App() {
   const dispatch = useDispatch();
@@ -95,6 +96,7 @@ function App() {
           </Box>
         </Container>
       </Box>
+      <FetchData />
       <FormModal open={open} setOpen={setOpen} />
     </>
   );

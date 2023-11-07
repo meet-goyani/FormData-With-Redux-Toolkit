@@ -8,7 +8,7 @@ const initialState = {
       email: "user@gmail.com",
       date: "2021-11-3",
       gender: "male",
-      hobbies: [],
+      hobbies: ["Reading, Speaking"],
     },
   ],
 };
